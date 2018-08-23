@@ -7,12 +7,14 @@ import { FormPessoaComponent } from './form-pessoa/form-pessoa.component';
 import { FormsModule,ReactiveFormsModule   } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MapaComponent } from './mapa/mapa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPessoaComponent,
-    HomeComponent
+    HomeComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,

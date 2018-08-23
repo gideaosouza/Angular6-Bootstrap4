@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms'; 
 import { FormPessoaComponent } from '../form-pessoa/form-pessoa.component';
 import { HomeComponent } from '../home/home.component';
+import { MapaComponent } from '../mapa/mapa.component';
 
 
 
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'pessoa', component: FormPessoaComponent },
+  { path: 'mapa', component: MapaComponent },
 ]; 
 
 @NgModule({
