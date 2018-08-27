@@ -1,25 +1,49 @@
-<div class="col-lg-10">
-  <h1>Pessoa Form</h1>
   <form   [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  </swal>
+
+<div class="container">
 
 
-    <div class="form-group">
-      <label for="nome">Nome</label>
-      <input type="text" class="form-control" formControlName="nome" id="nome" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }"
-        required>
-      <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
-        <div *ngIf="f.nome.errors.required">Esse campo é necessario</div>
+<div class="row" style="padding-top:20px;">
+  
+    <h2>Cadastro de pessoas</h2>
+</div>
+
+
+  <div class="row">
+    
+  <div class="col-md-8">
+   <hr>
+    <h1>Pessoa</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" formControlName="nome" id="nome" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }"
+          required>
+        <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+          <div *ngIf="f.nome.errors.required">Esse campo é necessario</div>
+        </div>
+
       </div>
 
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" class="form-control" formControlName="idade" id="idade">
+      </div>
+
+      <button type="submit" class="btn btn-success">Enviar</button>
+
+    </form>
+
+  </div>
+
+  <div class="col-md-3" style="overflow-y:scroll;padding:10px;height: 80vh;" >
+    <div *ngFor="let pessoa of listaPessoas">
+      <app-pessoa-view [pessoa]="pessoa" (respostaPessoa)="reciverFeedback($event)"></app-pessoa-view>
     </div>
+  </div>
 
-    <div class="form-group">
-      <label for="idade">Idade</label>
-      <input type="text" class="form-control" formControlName="idade" id="idade">
-    </div>
-    
-    <button type="submit" class="btn btn-success">Enviar</button>
-
-  </form>
-
+</div>
 </div>

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div  [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
- <router-outlet  #o="outlet" class="container"></router-outlet>
+<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" style="margin: 0px;padding: 0px;">
+ <router-outlet  #o="outlet" style="margin: 0px;padding: 0px;"></router-outlet>
 </div>
 <app-footer></app-footer>

@@ -8,15 +8,21 @@ import { FormsModule,ReactiveFormsModule   } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapaComponent } from './mapa/mapa.component';
+import { PessoaViewComponent } from './form-pessoa/pessoa-view/pessoa-view.component';
+
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPessoaComponent,
     HomeComponent,
-    MapaComponent
+    MapaComponent,
+    PessoaViewComponent
   ],
   imports: [
+    
+    SweetAlert2Module.forRoot(),
     BrowserModule,
     UiModule,
     FormsModule,
