@@ -5,20 +5,21 @@
 
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control"   formControlName="nome"  id="nome"  [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" required>
+      <input type="text" class="form-control" formControlName="nome" id="nome" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }"
+        required>
       <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
         <div *ngIf="f.nome.errors.required">Esse campo é necessario</div>
-    </div>
+      </div>
 
     </div>
 
     <div class="form-group">
       <label for="idade">Idade</label>
-      <input type="text" class="form-control"   formControlName="idade"  id="idade">
+      <input type="text" class="form-control" formControlName="idade" id="idade">
     </div>
-
+    
     <button type="submit" class="btn btn-success">Enviar</button>
-  
+
   </form>
 
 </div>
